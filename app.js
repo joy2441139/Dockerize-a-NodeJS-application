@@ -6,7 +6,11 @@ const app = express();
 //port number
 const port = 3000;
 
-const now = new Date();
+const now2 = new Date().toLocaleString('en-US', {
+    timeZone: 'Asia/Dhaka'
+
+});
+const now = new Date(now2)
 
 //static files
 app.use(express.static('public'));
@@ -23,4 +27,4 @@ app.get('', (req, res) => {
 })
 
 //listen on port 3000 and log current time and date
-app.listen(port, () => console.log(`Listening to http://localhost:${port} \nCurrent Time: ${func.formatTime(now)} \nCurrent Date: ${func.formatDate(now)}`));
+app.listen(port, () => console.log(`Current Time: ${func.formatTime(now)} \nCurrent Date: ${func.formatDate(now)}`));

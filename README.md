@@ -8,6 +8,9 @@ Setting up the project:
 
 ```sh
 git clone https://github.com/joy2441139/Dockerize-a-NodeJS-application.git
+```
+
+```sh
 cd Dockerize-a-NodeJS-application
 ```
 
@@ -26,5 +29,3 @@ Setting up Docker:
 ```
 
 After running container current time & date can be seen on the console as well in this [http://localhost:9000](http://localhost:9000) link.
-
-### Thank you. Have a nice day.
