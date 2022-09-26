@@ -42,6 +42,9 @@ function formatDate(date) {
     return `${days[date.getDay()]}, ${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
 }
 
-const now = new Date();
-document.querySelector(".time").textContent = formatTime(now);
-document.querySelector(".date").textContent = formatDate(now);
+setInterval(() => {
+    const now = new Date();
+    document.querySelector(".time").textContent = formatTime(now);
+    document.querySelector(".date").textContent = formatDate(now);
+
+}, 200);
