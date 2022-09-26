@@ -2,6 +2,7 @@
  * 
  * @param {Date} date
  */
+//function to format & get current time
 function formatTime(date) {
     const hour12 = date.getHours() % 12 || 12;
     const min = date.getMinutes();
@@ -14,6 +15,7 @@ function formatTime(date) {
  * 
  * @param {Date} date 
  */
+//function to format & get current date
 function formatDate(date) {
     const days = [
         "Sunday",
@@ -42,9 +44,13 @@ function formatDate(date) {
     return `${days[date.getDay()]}, ${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
 }
 
+//set 200 milliseconds interval to auto-update time/date
 setInterval(() => {
     const now = new Date();
-    document.querySelector(".time").textContent = formatTime(now);
-    document.querySelector(".date").textContent = formatDate(now);
-
+    if (typeof document !== 'undefined') {
+        document.querySelector(".time").textContent = formatTime(now);
+        document.querySelector(".date").textContent = formatDate(now);
+    }
 }, 200);
+
+module.exports = { formatTime, formatDate }
