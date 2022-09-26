@@ -1,0 +1,26 @@
+# Dockerized nodejs application
+
+## Containerization Technical Test for Digiqore Systems Ltd.
+
+### Project Setup:
+
+Setting up the project:
+
+```sh
+git clone https://github.com/joy2441139/Dockerize-a-NodeJS-application.git
+cd Dockerize-a-NodeJS-application
+```
+
+Setting up Docker:
+
+1. Creating docker Images:
+
+```sh
+docker build -t nodejs-docker .
+```
+
+2. Creating docker container
+
+```sh
+docker run -it -p 9000:3000 nodejs-docker
+```
