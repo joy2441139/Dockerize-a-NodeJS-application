@@ -5,8 +5,9 @@
 function formatTime(date) {
     const hour12 = date.getHours() % 12 || 12;
     const min = date.getMinutes();
+    const isAM = date.getHours() < 12;
 
-    return `${hour12.toString().padStart(2, "0")}:${min.toString().padStart(2, "0")}`;
+    return `${hour12.toString().padStart(2, "0")}:${min.toString().padStart(2, "0")} ${isAM ? "AM" : "PM"}`;
 }
 
 /**
