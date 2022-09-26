@@ -18,5 +18,5 @@ app.get('', (req, res) => {
     res.render('index');
 })
 
-//listen on port 4000 and log current time and date
+//listen on port 3000 and log current time and date
 app.listen(port, () => console.log(`Listening to http://localhost:${port}`));
