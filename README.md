@@ -1,7 +1,5 @@
 # Dockerized nodejs application
 
-## Containerization Technical Test for Digiqore Systems Ltd.
-
 ### Project Setup:
 
 Setting up the project:
